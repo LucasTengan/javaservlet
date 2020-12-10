@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+// Servlet é um objeto que pode ser chamado atraves de um protocolo http
 //oi
 // Tomcat serve como "main" ele instancia o Servlet, serve como um container
 // Inversão de controle, meu main nao instancia nada, e sim o Tomcat
