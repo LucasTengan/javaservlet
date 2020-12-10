@@ -13,9 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.alura.gerenciador.modelo.Banco;
 import br.com.alura.gerenciador.modelo.Empresa;
 
-public class NovaEmpresa {
+public class NovaEmpresa implements Acao {
 	
-	public void executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public String executa(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String dataEmpresa = request.getParameter("data");
 		Date dataAbertura = null;
 		try {
@@ -35,7 +35,7 @@ public class NovaEmpresa {
 		banco.adiciona(empresa);
 		
 		// o navegador recebe a resposta. será para onde o navegador enviará a nova requisição
-		response.sendRedirect("entrada?acao=ListaEmpresas");
+		return "response:entrada?acao=ListaEmpresas";
 		
 		
 //		// chamar o JSP
